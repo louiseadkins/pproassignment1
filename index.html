@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+. <!DOCTYPE html>
 <html>
   <head>
     <title>JavaScript &amp; jQuery Example</title>
@@ -59,7 +59,7 @@
         $('input[value="Run Script"]').click( function(){
           console.log('Caught a "Run Script" click event.');
           $("#output_area").addClass( 'selected');
-          alert("The looping function should go here.");
+          loop_and_display() ;
         });
 
         // attach an event listener to the Clear button here
@@ -97,15 +97,19 @@
          <p>
 
       <dt>What is the ID of the place where the output of the loop function should go?</dt>
-      <dd>output_area ?</dd>
+      <dd>output_area</dd>
          <p>
 
       <dt>What is the class that changes the style of the output area?</dt>
-      <dd>  .idle, #output_area </dd>
+      <dd> .selected</dd>
          <p>
 
       <dt>What does the selector input[value="Run Script"] do? Enter the URLs of the places you researched with your explanation.</dt>
-      <dd>input refers to </dd>
+      <dd>
+       The selector input[value="Run script"] is
+       Sources: this code itself, and <a href="https://api.jquery.com/attribute-equals-selector"> this page on jQuery. </a>
+
+       </dd>
          <p>
 
       <dt>What is the URL of the documentation for the jQuery <kbd>.addClass</kbd> method?</dt>
