@@ -63,6 +63,14 @@
         });
 
         // attach an event listener to the Clear button here
+        $('input[value="Clear"]').click( function(){
+          console.log('Caught a "Clear" click event.');
+          $("#output_area").removeClass( 'selected')
+          $("#output_area").addClass( 'idle');
+          output_html="<p>Click the <i>Run Script</i> button.</p>";
+          $("#output_area").html(output_html);
+        });
+
 
       }); // end of $(document).ready
 
@@ -106,7 +114,7 @@
 
       <dt>What does the selector input[value="Run Script"] do? Enter the URLs of the places you researched with your explanation.</dt>
       <dd>
-       The selector input[value="Run script"] is
+       The selector input[value="Run script"] is "selecting" the "Run Script" button.
        Sources: this code itself, and https://api.jquery.com/attribute-equals-selector
 
        </dd>
@@ -133,7 +141,7 @@
 
     <h2>Output area:</h2>
     <div id="output_area" class="idle">
-      <p>This is the area where the output goes. This content appears before the script is run.</p>
+      <p>Click the <i>Run Script</i> button.</p>
     </div>
   </body>
 </html>
